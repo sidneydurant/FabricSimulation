@@ -2,9 +2,10 @@
 public class PointMass {
 	
 	public float x, y, xOld, yOld;
+	public Color c;
 	public boolean pinned;
 	
-	public PointMass( float xPos, float yPos, float xVel, float yVel ){
+	public PointMass( float xPos, float yPos, float xVel, float yVel, Color c ){
 		
 		this.x = xPos;
 		this.y = yPos;
@@ -12,6 +13,7 @@ public class PointMass {
 		this.xOld = xPos - xVel;
 		this.yOld = yPos - yVel;
 		pinned = false;
+		this.c = c;
 	}
 	
 	public void update(){
@@ -39,7 +41,7 @@ public class PointMass {
 	}
 	
 	public void draw( Render r ){
-		r.drawPoint((int)x, (int)y);
+		r.drawColoredPoint((int)x, (int)y, c);
 	}
 	
 	public void setPin( boolean b ){

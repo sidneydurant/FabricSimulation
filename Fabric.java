@@ -1,5 +1,6 @@
 
 import java.util.LinkedList;
+import java.util.Random;
 
 /* @author Sidney Durant
  * This class simulates a fabric composed of a grid like arrangement of points
@@ -20,12 +21,14 @@ public class Fabric {
 		int xPos;
 		int yPos;
 	
+		Random r = new Random();
+		
 		for ( int xi = 0; xi < pointMassCountX; xi++ ){
 			for( int yi = 0; yi < pointMassCountY; yi++ ){
 				xPos = x + (linkLength*xi);
 				yPos = y + (linkLength*yi);
 				
-				pointMassArray[xi][yi] = new PointMass( xPos, yPos, 0, 0 );
+				pointMassArray[xi][yi] = new PointMass( xPos, yPos, 0, 0, new Color( r.nextInt() ) );
 				if( yi == 0 ){
 					pointMassArray[xi][yi].setPin( true );
 				}

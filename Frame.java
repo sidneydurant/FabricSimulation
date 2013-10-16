@@ -26,7 +26,7 @@ public class Frame extends Canvas {
 		Thread runThread = new Thread(new Runnable() {
 			public void run() {
 				try{
-					Thread.sleep( 20 );
+					Thread.sleep( 20 ); // sleep to let the frame set up
 				} catch ( Exception e ){
 					// uncaught exception
 				}

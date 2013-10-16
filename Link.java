@@ -42,7 +42,7 @@ public class Link {
 	}
 	
 	public void draw( Render r ){
-		r.drawLine( (int)p0.x, (int)p0.y, (int)p1.x, (int)p1.y);
+		r.drawColoredLine( (int)p0.x, (int)p0.y, p0.c, (int)p1.x, (int)p1.y, p1.c);
 	}
 	
 	// calculates the sqrt of a number
