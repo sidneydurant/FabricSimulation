@@ -1,4 +1,4 @@
-
+// Render color based on speed. Then velocity. then accel
 public class PointMass {
 	
 	public float x, y, xOld, yOld;

@@ -39,10 +39,10 @@ public class Simulation extends JPanel implements KeyListener, MouseListener, Mo
 
 	public void init(){
 
-		int vertexCountX = 172;
-		int vertexCountY = 80;
-		int linkLength = 10;
-		int linkStrength = 5;
+		int vertexCountX = 172/2;
+		int vertexCountY = 80/2;
+		int linkLength = 10*2;
+		int linkStrength = 6/2;
 
 		int xPos = 100;
 		int yPos = 100;

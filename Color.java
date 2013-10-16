@@ -14,7 +14,7 @@ public class Color {
 	// the floats a, r, g, b may contain any values, but when returned as ARGB
 	// values of the color, they will be from 0 to 255
 	
-	private final float a, r, g, b;
+	private float a, r, g, b;
 	
 	public Color( int c ){
 		a = (short) ((c & 0xff000000) >>> 24);
@@ -30,9 +30,24 @@ public class Color {
 		this.b = b;
 	}
 	
-	// add Color c to the current color
+	public Color( Color c ){
+		this.a = c.a;
+		this.r = c.r;
+		this.g = c.g;
+		this.b = c.b;
+	}
+	
+	// return the current color plus the Color c
 	public Color plus( Color c ){
 		return new Color( a+c.a, r+c.r, g+c.g, b+c.b );
+	}
+	
+	// add Color c to the current color
+	public void add( Color c ){
+		a += c.a;
+		r += c.r;
+		g += c.g;
+		b += c.b;
 	}
 	
 	// subtract Color c from the current color

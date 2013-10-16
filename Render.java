@@ -59,20 +59,20 @@ public class Render {
 				
 				if( y0 < y1 ){ // iterate from y0 to y1
 					float x = x0;
-					Color c = c0;
+					Color c = new Color(c0);
 					for( int y = y0; y <= y1; y++ ){
 						
 						drawUncheckedColoredPoint( (int) x, y, c );
 						x += xChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				}else{ // iterate from y1 to y0
 					float x = x1;
-					Color c = c1;
+					Color c = new Color(c1);
 					for( int y = y1; y <= y0; y++ ){
 						drawUncheckedColoredPoint( (int) x, y, c );
 						x += xChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				
 				}
@@ -84,19 +84,19 @@ public class Render {
 				
 				if( x0 < x1){ // iterate from x0 to x1
 					float y = y0;
-					Color c = c0;
+					Color c = new Color(c0);
 					for ( int x = x0; x <= x1; x++ ){
 						drawUncheckedColoredPoint( x, (int)y, c );
 						y += yChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				}else{ // iterate from x1 to x0
 					float y = y1;
-					Color c = c1;
+					Color c = new Color(c1);
 					for ( int x = x1; x <= x0; x++ ){
 						drawUncheckedColoredPoint( x, (int)y, c );
 						y += yChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				}
 			}
@@ -115,20 +115,20 @@ public class Render {
 				
 				if( y0 < y1 ){ // iterate from y0 to y1
 					float x = x0;
-					Color c = c0;
+					Color c = new Color(c0);
 					for( int y = y0; y <= y1; y++ ){
 						
 						drawColoredPoint( (int) x, y, c );
 						x += xChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				}else{ // iterate from y1 to y0
 					float x = x1;
-					Color c = c1;
+					Color c = new Color(c1);
 					for( int y = y1; y <= y0; y++ ){
 						drawColoredPoint( (int) x, y, c );
 						x += xChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				
 				}
@@ -140,19 +140,19 @@ public class Render {
 				
 				if( x0 < x1){ // iterate from x0 to x1
 					float y = y0;
-					Color c = c0;
+					Color c = new Color(c0);
 					for ( int x = x0; x <= x1; x++ ){
 						drawColoredPoint( x, (int)y, c );
 						y += yChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				}else{ // iterate from x1 to x0
 					float y = y1;
-					Color c = c1;
+					Color c = new Color(c1);
 					for ( int x = x1; x <= x0; x++ ){
 						drawColoredPoint( x, (int)y, c );
 						y += yChangePerStep;
-						c = c.plus(cChangePerStep);
+						c.add(cChangePerStep);
 					}
 				}
 			}
